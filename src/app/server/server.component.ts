@@ -8,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ServerComponent implements OnInit {
   allowServer = false;
   allowbutton = false;
-  username = '';
-  password = '';
+  servername = '';
+  
   serverCreated = false;
   serverStatus = 'online';
+  servers = ['server 1','server 2'];
   constructor() {
     setTimeout(() => {
       this.allowServer = true;
@@ -21,8 +22,11 @@ export class ServerComponent implements OnInit {
 
   ngOnInit(): void {}
   onClick() {
-    this.username = '';
+    
     this.serverCreated = true;
+  }
+  onUpdateServername(event : Event){
+    this.servername = (<HTMLInputElement>event.target).value;
   }
   getServerStatus(){
     return this.serverStatus;
