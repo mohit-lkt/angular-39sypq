@@ -1,0 +1,18 @@
+<label>UserName </label>
+<input type="text" class="form-control" [(ngModel)]="username" /><br /><br />
+<label> Password </label>
+<input type="text" class="form-control" [(ngModel)]="password" />
+<p>{{ username }}</p>
+<p *ngIf="serverCreated; else noServer">server with server Id works!</p>
+<ng-template #noServer>
+  <p>No Server was created.</p>
+</ng-template>
+<button [disabled]="username === '' && password === ''" (click)="onClick()">
+  Click Me
+</button>
+<p [ngStyle]="{ backgroundColor: getColor() }">
+  Server status : {{ serverStatus }}
+</p>
+<p [ngStyle]="{ backgroundColor: getColor() }">
+  Server status : {{ serverStatus }}
+</p>
