@@ -5,6 +5,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
+import { DisplayComponent } from './display/display.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,7 @@ import { ServerComponent } from './server/server.component';
     FormsModule,
     RouterModule.forRoot([{ path: '' }]),
   ],
-  declarations: [AppComponent, ServerComponent],
+  declarations: [AppComponent, ServerComponent, DisplayComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

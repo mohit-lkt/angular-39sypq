@@ -1,0 +1,9 @@
+<button (click)="onClick()">Display Details</button>
+<p *ngIf="displayStatus">secret password = tuna</p>
+<p
+  *ngFor="let click of clicks; let i = index"
+  [ngStyle]="{ backgroundColor: i > 5 ? 'blue' : 'transperant' }"
+  [ngClass]="{ 'white-text': i > 5 }"
+>
+  {{ click }}
+</p>
